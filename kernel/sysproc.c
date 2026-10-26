@@ -8,6 +8,12 @@
 #include "vm.h"
 
 uint64
+sys_getnproc(void)
+{
+  return countactiveprocs();
+}
+
+uint64
 sys_exit(void)
 {
   int n;
